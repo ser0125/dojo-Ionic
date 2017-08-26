@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Dojo Ionic
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-card>
+      <ion-card-content>
+  <input type="text" [ngStyle]="{'border':none }" [(ngModel)]="nickname">
+<button ion-button block (click)="testDojo(nickname)" >Hello World</button>
+<img [ngStyle]="{'border-radius':25+'px' }" [hidden]="!valid" [src]="informacionUsuario.avatar_url" alt="User Avatar">
+<h1 [hidden]="!valid" [ngStyle]="{'margin-top':15+'px' }"> Nombre de usuario: {{informacionUsuario.login}}</h1>
+</ion-card-content>
+  </ion-card>
+</ion-content>
